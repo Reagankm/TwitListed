@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+
+{% block title %}Created{% endblock %}
+
+{% block body %}
+<p>
+  Your lists have been created.  Click below to visit your list page on Twitter and see them.
+</p>
+<p>
+  <a href="{{ ''.join(['http://www.twitter.com/', user, '/lists']) }}"><button>Your Lists</button></a>
+</p>
+{% endblock %}

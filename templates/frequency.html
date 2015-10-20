@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block title %}Frequency{% endblock %}
+
+{% block body %}
+<p>
+Here are the accounts you follow and their average tweets per day.
+</p>
+
+<p>
+Click the button below to create the lists.
+</p>
+<p>
+  <a href="{{ url_for('create_lists') }}"><button>Create Lists</button></a>
+</p>
+
+<table border=4 cellspacing=4 cellpadding=4> 
+  <tr>
+    <th>Account</th>
+    <th>Avg Tweets per Day</th>
+  </tr>
+  
+  {% for account in accounts %}
+  <tr>
+    <td bgcolor="{{ account.color }}">{{ account.name }}</td>
+    <td bgcolor="{{ account.color }}">{{ account.frequency }}</td>
+  </tr>
+  {% endfor %}
+  
+</table>
+{% endblock %}
+

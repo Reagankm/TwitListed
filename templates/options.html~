@@ -1,0 +1,13 @@
+{% extends "master.html" %}
+
+{% block title %}Options{% endblock %}
+
+{% block body %}
+<p>Listereen will create Twitter lists for you
+sorting the accounts you follow based on
+how frequently they tweet.</p>
+<p>
+  Click the button below to view the frequency
+  statistics for the accoutns you follow. </p>
+<p>  
+<a href="{{ url_for('sort') }}"><button>Calculate</button></a></p>

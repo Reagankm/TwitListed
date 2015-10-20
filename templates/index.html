@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+Welcome to TwitListed!  
+
+<p>
+
+
+  
+<a href="{{ url_for('authorize') }}"><button>Click here to login to Twitter</button></a>
+
+  
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}Options{% endblock %}
+
+{% block body %}
+<p>TwitListed will create Twitter lists for you
+sorting the accounts you follow based on
+how frequently they tweet.</p>
+<p>
+  Click the button below to view the frequency
+  statistics for the accounts you follow. </p>
+<p>Please note, this process can take a long time (possibly more than 10 minutes).  As long as the browser icon/wheel is still spinning the app is still running.  (It has to pull up all of the accounts you follow and query their most recent 200 tweets.  Also, Twitter limits how many accounts/tweets can be accessed in every 15 minute period so this can lead to additional delays.)</p>
+<p>  
+<a href="{{ url_for('frequency') }}"><button>Calculate</button></a></p>
+
+{% endblock %}
